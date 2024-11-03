@@ -12,6 +12,7 @@ Die Website von [Bayernwerte Immobilien](https://www.bayernwerte.de) stellt Immo
 - **Bildbearbeitung**: Bildbearbeitung zur Optimierung der Darstellung.
 - **WordPress CLI & Iframe**: Automatisierte Integration der Daten in die WordPress-Seite.
 - **GitHub**: Versionskontrolle und Dokumentation des Projekts.
+- **Werkzeuge**: BayernAtlas für Grundstücksinformationen
 
 ## Funktionen
 

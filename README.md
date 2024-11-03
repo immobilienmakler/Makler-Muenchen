@@ -1,6 +1,6 @@
 # Bayernwerte Immobilien
 
-Diese Repository enthält alle Dateien und Anleitungen für den Betrieb der Bayernwerte Immobilien-Website mit Anbindung an die Maklersoftware "Ilogu" über die OpenImmo-Schnittstelle.
+Diese Repository enthält Dateien und Anleitungen für den Betrieb der Bayernwerte Immobilien-Website mit Anbindung an die Maklersoftware "Ilogu" über die OpenImmo-Schnittstelle.
 
 ## Projektübersicht
 
@@ -23,11 +23,7 @@ Bayernwerte Immobilien ist Ihr kompetenter Partner für Immobilien in München u
 
 Wir bieten zwei Bewertungsoptionen:
 1. **Online-Bewertung** – kostenlos und direkt auf unserer Website verfügbar.
-2. **Verkehrswertgutachten nach §193 BauGB** – ausführliche und detaillierte Gutachten für höchste Entscheidungssicherheit.
-
-### Neubauvertrieb
-
-Unser Vertriebsteam sorgt für den schnellen und erfolgreichen Verkauf von Neubauprojekten. Mit der Strategie „Der Erfolg liegt in der letzten Einheit“ garantieren wir eine professionelle und zielgerichtete Abwicklung aller Verkaufsphasen.
+2. **Verkehrswertgutachten** – ausführliche und detaillierte Gutachten für höchste Entscheidungssicherheit.
 
 ## Einrichtung und Betrieb
 

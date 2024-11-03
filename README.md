@@ -4,7 +4,7 @@ Diese Repository enthält Dateien und Anleitungen für den Betrieb der Bayernwer
 
 ## Projektübersicht
 
-Die Website von Bayernwerte Immobilien stellt Immobilienangebote in München und Umgebung dar und wird durch aktuelle Objektdaten aus Ilogu automatisch aktualisiert. Die Datenübertragung erfolgt via FTP, und Bilder werden mittels Bildbearbeitung optimiert. Über die **WordPress CLI und Iframe** werden alle Daten in die Website integriert, um Nutzern immer die aktuellsten Immobilienangebote präsentieren zu können.
+Die Website von [Bayernwerte Immobilien](https://www.bayernwerte.de) stellt Immobilienangebote in München und Umgebung dar und wird durch aktuelle Objektdaten aus Ilogu automatisch aktualisiert. Die Datenübertragung erfolgt via FTP, und Bilder werden mittels Bildbearbeitung optimiert. Über die **WordPress CLI und Iframe** werden alle Daten in die Website integriert, um Nutzern immer die aktuellsten Immobilienangebote präsentieren zu können.
 
 ## Technologie-Stack
 

@@ -1,4 +1,4 @@
-# Bayernwerte Immobilien
+# Immobilien Anbieter Webseite
 
 Diese Repository enthält Dateien und Anleitungen für den Betrieb der Bayernwerte Immobilien-Website mit Anbindung an die Maklersoftware "Ilogu" über die OpenImmo-Schnittstelle.
 

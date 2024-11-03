@@ -39,5 +39,6 @@ Dieses Projekt steht unter der Bayernwerte-Immobilien-Lizenz und ist nicht für 
 
 Für weitere Fragen und Informationen zu Bayernwerte Immobilien:
 - **Website**: [www.bayernwerte.de](https://www.bayernwerte.de)
+-  **Github**: [Immobilienmakler München](https://immobilienmakler.github.io/Makler-Muenchen/#angebote)
 - **Email**: anfrage@bayernwerte.de
 - **Telefon**: +49-(0)89-21909733

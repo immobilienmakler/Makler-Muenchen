@@ -47,10 +47,10 @@ Für weitere Fragen und Informationen zu Bayernwerte Immobilien:
 ## DSGVO konforme Upstream-DNS-Server
 - https://dns.mullvad.net/dns-query
 - https://dns10.quad9.net/dns-query
-https://dns.quad9.net/dns-query
-https://doh.ffmuc.net/dns-query
-https://dnsforge.de/dns-query
-https://dns.digitale-gesellschaft.ch/dns-query
-https://unfiltered.adguard-dns.com/dns-query
-https://doh.libredns.gr/dns-query
-https://doh-de.blahdns.com/dns-query
+- https://dns.quad9.net/dns-query
+- https://doh.ffmuc.net/dns-query
+- https://dnsforge.de/dns-query
+- https://dns.digitale-gesellschaft.ch/dns-query
+- https://unfiltered.adguard-dns.com/dns-query
+- https://doh.libredns.gr/dns-query
+- https://doh-de.blahdns.com/dns-query

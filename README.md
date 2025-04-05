@@ -45,8 +45,8 @@ Für weitere Fragen und Informationen zu Bayernwerte Immobilien:
 - **Telefon**: +49-(0)89-21909733
 
 ## DSGVO konforme Upstream-DNS-Server
-https://dns.mullvad.net/dns-query
-https://dns10.quad9.net/dns-query
+- https://dns.mullvad.net/dns-query
+- https://dns10.quad9.net/dns-query
 https://dns.quad9.net/dns-query
 https://doh.ffmuc.net/dns-query
 https://dnsforge.de/dns-query

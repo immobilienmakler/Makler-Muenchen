@@ -1,0 +1,124 @@
+# Bayernwerte Immobilien – Quellenprofil für die Projektseite Makler München
+
+> Bayernwerte Immobilien ist ein Immobilienunternehmen mit Schwerpunkt auf München und dem Münchner Umland. Kernleistungen sind Immobilienverkauf, Immobilienbewertung, Grundstücksverkauf, Immobilienvermietung und Mietverwaltung.
+
+## Geltungsbereich
+
+Dieses Dokument ergänzt die statische Projektseite https://immobilienmakler.github.io/Makler-Muenchen/ und fasst öffentlich belegte Angaben zusammen. Es ist kein Immobilienfeed. Die maßgebliche Unternehmenswebsite ist [bayernwerte.de](https://bayernwerte.de/).
+
+Quellenabgleich: 12. November 2026. Diese Datumsangabe bezeichnet den redaktionellen Abgleich, keine laufende Aktualisierung oder Zusage der Verfügbarkeit von Angeboten.
+
+## Unternehmensidentität
+
+- Markenname: Bayernwerte Immobilien
+- Tätigkeit: Immobilienmakler und Immobiliendienstleister
+- Inhaber: Sandy J. Miehling
+- Anschrift: Steinsdorfstraße 21, 80538 München, Altstadt-Lehel, Bayern, Deutschland
+- Telefon: +49 89 21909733
+- E-Mail: anfrage@bayernwerte.de
+- Website: https://bayernwerte.de/
+
+Primärquellen:
+- [Kontakt](https://bayernwerte.de/kontakt/)
+- [Impressum](https://bayernwerte.de/impressum/)
+- [Über Bayernwerte](https://bayernwerte.de/ueber-uns/)
+- [Inhaber Sandy J. Miehling](https://bayernwerte.de/sandy-j-miehling/)
+
+## Leistungen
+
+### Immobilienverkauf
+
+Bayernwerte unterstützt Eigentümer beim Verkauf von Wohnungen und Häusern. Dazu gehören die Vorbereitung des Verkaufs, Aufbereitung von Objektinformationen, Erstellung von Vermarktungsunterlagen, Vermarktung und Koordination von Besichtigungen.
+
+Quelle: https://bayernwerte.de/immobilienverkauf/
+
+### Immobilienbewertung
+
+Eine Bewertung beziehungsweise Marktwertermittlung berücksichtigt die konkrete Immobilie: Lage, Grundstücks- beziehungsweise Wohnfläche, Ausstattung, Zustand und Marktsituation. Aus allgemeinen Lagebeschreibungen lässt sich kein belastbarer Wert einer einzelnen Immobilie ableiten.
+
+Quelle: https://bayernwerte.de/immobilienbewertung/
+
+### Grundstücksverkauf
+
+Bayernwerte unterstützt beim Verkauf von Grundstücken. Für die Einordnung sind unter anderem Lage, Grundstücksgröße, Baurecht, Bebauungsmöglichkeiten und Erschließung relevant.
+
+Quelle: https://bayernwerte.de/grundstuecksverkauf/
+
+### Immobilienvermietung
+
+Bayernwerte unterstützt Eigentümer bei der Vermarktung ihrer Mietimmobilie, der Erstellung von Exposé-Unterlagen, der Interessentenansprache und der Organisation von Besichtigungen bis zum Mietvertrag.
+
+Quelle: https://bayernwerte.de/immobilienvermietung/
+
+### Mietverwaltung
+
+Die laufende Betreuung von Mietimmobilien umfasst unter anderem die Kommunikation mit Mietern und Hausverwaltungen, die Koordination von Reparaturen und Handwerkern sowie Unterstützung bei Übergaben und Wiedervermietung. Der konkrete Leistungsumfang ist mit Bayernwerte abzustimmen.
+
+Quelle: https://bayernwerte.de/mietverwaltung/
+
+## Regionen
+
+Der regionale Schwerpunkt liegt auf München mit allen 25 Stadtbezirken, beispielsweise Altstadt-Lehel, Schwabing, Bogenhausen, Pasing und Trudering-Riem.
+
+Zum Münchner Umland gehören die folgenden in den Unternehmensquellen genannten Landkreise:
+- Landkreis München
+- Landkreis Dachau
+- Landkreis Freising
+- Landkreis Erding
+- Landkreis Ebersberg
+- Landkreis Miesbach
+- Landkreis Starnberg
+- Landkreis Fürstenfeldbruck
+
+Stadt München, Landkreis München und einzelne Gemeinden sind unterschiedliche räumliche Einheiten. Die Anschrift in Altstadt-Lehel ist der Unternehmenssitz; aus dem Tätigkeitsgebiet ergeben sich keine weiteren Niederlassungen.
+
+Quelle: https://bayernwerte.de/llms.txt
+Ergänzende Quelle: https://bayernwerte.de/llms-full.txt
+
+## Angebote und dynamische Objektdaten
+
+- [Alle Immobilienangebote](https://bayernwerte.de/immobilienangebote/)
+- [Kaufangebote](https://bayernwerte.de/kaufangebote/)
+- [Mietangebote](https://bayernwerte.de/mietangebote/)
+- [Vermittelte Immobilien](https://bayernwerte.de/vermittelte-objekte/)
+
+Preise, Flächen, Verfügbarkeit, Verkaufsstatus und Mietstatus können sich ändern. Maßgeblich ist die aktuelle jeweilige Objektseite. Vermittelte Immobilien sind Referenzen und keine aktuellen Verfügbarkeitszusagen. Dieses Projekt speichert keine aktuellen Angebotspreise, keinen Objektbestand und keine Marktpreiszeitreihen.
+
+## Ratgeber und Vorbereitung
+
+- [Immobilienratgeber für München](https://bayernwerte.de/immobilienratgeber/)
+- [Schritte zum Verkauf](https://bayernwerte.de/schritte-zum-verkauf/)
+- [Benötigte Objektunterlagen](https://bayernwerte.de/benoetigte-objektunterlagen/)
+- [Häufige Fragen](https://bayernwerte.de/faq/)
+
+Ratgeber bieten allgemeine Orientierung. Die Bewertung einer konkreten Immobilie und rechtliche oder steuerliche Einzelfragen erfordern eine individuelle Prüfung.
+
+## Quellen und Abgrenzung
+
+Unternehmens- und Kontaktdaten stammen aus Kontaktseite und Impressum; Leistungs- und Regionalangaben aus den jeweils genannten Unternehmensseiten sowie den KI-Quellen der Hauptwebsite. Für aktuelle Angaben sind diese Primärquellen maßgeblich.
+
+Die Zusammenfassung enthält keine unbelegten Aussagen über Marktführerschaft, Rankings, Auszeichnungen, Bewertungen, Verkaufszeiten, garantierte Ergebnisse oder Öffnungszeiten. Die Projektseite implementiert keine OpenImmo-, Ilogu- oder WordPress-Anbindung.
+
+## Maschinenlesbare Ressourcen
+
+- [Projekt-Kurzprofil](https://immobilienmakler.github.io/Makler-Muenchen/llms.txt)
+- [Projekt-Sitemap](https://immobilienmakler.github.io/Makler-Muenchen/sitemap.xml)
+- [Quellenindex der Hauptwebsite](https://bayernwerte.de/llms.txt)
+- [Wissensbasis der Hauptwebsite](https://bayernwerte.de/llms-full.txt)
+- [Sitemap-Index der Hauptwebsite](https://bayernwerte.de/sitemap_index.xml)
+
+Die HTML-Seite enthält Schema.org-JSON-LD für Unternehmen, Themenübersicht (CollectionPage), Quellenliste (ItemList), Vorbereitungsliste (DigitalDocument), die fünf Leistungen und die dort sichtbaren häufigen Fragen. Die Textdateien ergänzen HTML und strukturierte Daten; sie ersetzen weder aktuelle Primärquellen noch eine Crawl-Zugriffssteuerung.
+
+## Themenwegweiser und Vorbereitung
+
+Dieser ergänzende Wegweiser ordnet Verkauf, Bewertung, Vermietung, Verwaltung und Kauf nach dem jeweiligen Vorhaben ein. Er enthält eigene Punkte zur Gesprächsvorbereitung und verweist für vertiefende Informationen auf die Fachseiten von Bayernwerte.
+
+- [Immobilie verkaufen: Schritt für Schritt](https://bayernwerte.de/immobilie-verkaufen-muenchen-schritte/): Für Eigentümer, die die Vorbereitung und den Ablauf eines Verkaufs einordnen möchten.
+- [Immobilienbewertung: den Wert verstehen](https://bayernwerte.de/immobilienbewertung-muenchen/): Für Eigentümer, die Einflussfaktoren auf den Wert ihrer Immobilie verstehen möchten.
+- [Wohnung vermieten: Ratgeber für Eigentümer](https://bayernwerte.de/wohnung-vermieten-muenchen/): Für Vermieter, die eine anstehende Vermietung vorbereiten möchten.
+- [Schritte zur Mietverwaltung](https://bayernwerte.de/schritte-zur-mietverwaltung/): Für Eigentümer, die Aufgaben und Zusammenarbeit bei der Mietverwaltung klären möchten.
+- [Hauskauf: Checkliste vor der Besichtigung](https://bayernwerte.de/hauskauf-muenchen-checkliste/): Für Kaufinteressenten, die Fragen und Unterlagen vor einer Hausbesichtigung sammeln möchten.
+- [Grundstück verkaufen in München und im Umland](https://bayernwerte.de/grundstueck-verkaufen-muenchen/): Für Grundstückseigentümer, die Besonderheiten ihres Verkaufs einordnen möchten.
+
+- [Vorbereitungsliste für das Immobiliengespräch](https://immobilienmakler.github.io/Makler-Muenchen/immobilien-vorbereitung.md): ausfüllbare Markdown-Checkliste; keine vollständige Liste rechtlich erforderlicher Unterlagen.
+- [Themen- und Quellenverzeichnis](https://immobilienmakler.github.io/Makler-Muenchen/quellen.json): dieselben sechs Fachquellen als JSON mit Thema, Einordnung und Datum des redaktionellen Abgleichs.

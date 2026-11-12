@@ -28,9 +28,18 @@ Anschließend <http://127.0.0.1:8000> öffnen. Alternativ lässt sich `index.htm
 
 ## Veröffentlichung
 
-In den Repository-Einstellungen unter **Pages → Build and deployment → Source** die Option **GitHub Actions** auswählen. Der vorhandene Workflow `.github/workflows/static.yml` veröffentlicht bei Pushes auf `main` oder manuellem Start die statische Seite. Änderungen über einen Pull Request werden erst nach dem Zusammenführen veröffentlicht.
+Die vorhandene GitHub-Pages-Konfiguration veröffentlicht aus **main → /docs** (Settings → Pages → Deploy from a branch). Der Ordner `docs/` enthält ausschließlich die sechs öffentlichen Dateien und `.nojekyll`. Dadurch bleiben Markdown-Dateien unverändert als Download erhalten; Dokumentation und Prüfscripts werden nicht veröffentlicht.
 
-Der Workflow prüft bei Pull Requests und vor einer Veröffentlichung die SEO-/KI-Konsistenz. Pull Requests lösen kein Deployment aus und erhalten nur Leserechte. Veröffentlicht werden ausschließlich `index.html`, `llms.txt`, `llms-full.txt`, `sitemap.xml`, `quellen.json` und `immobilien-vorbereitung.md` aus einem eigenen Verzeichnis; Dokumentation und Prüfscripts bleiben außerhalb der Website. Neue öffentliche Dateien müssen im Kopierschritt und in `PUBLIC_FILES` des Prüfscripts ergänzt werden.
+Nach Änderungen an den öffentlichen Quelldateien im Projektstamm das Veröffentlichungsverzeichnis aktualisieren und gemeinsam committen:
+
+```sh
+python3 scripts/prepare_pages.py
+python3 scripts/prepare_pages.py --check
+```
+
+Der Workflow `.github/workflows/static.yml` prüft SEO-/KI-Konsistenz und die Übereinstimmung des Verzeichnisses mit den Quellen. Er benötigt nur Leserechte. Die Veröffentlichung übernimmt der separate GitHub-Pages-Build bei Änderungen auf `main`. Bei Pull Requests wird geprüft; veröffentlicht wird nach dem Zusammenführen. Das gilt auch dann, wenn der Validierungsworkflow nicht als verpflichtender Branch-Check eingerichtet ist: Der Pages-Build selbst wird von GitHub unabhängig gestartet.
+
+Neue öffentliche Dateien müssen in `PUBLIC_FILES` von `scripts/validate_site.py` ergänzt werden. Anschließend das Veröffentlichungsverzeichnis neu erzeugen. `prepare_pages.py --check` meldet abweichende, fehlende oder zusätzliche Dateien.
 
 ## SEO und Auffindbarkeit für KI-Systeme
 
@@ -74,7 +83,7 @@ Die Wirkung lässt sich nach Veröffentlichung über folgende Daten beurteilen, 
 - **Statistik von bayernwerte.de:** Verweise von `immobilienmakler.github.io`, deren Zielseiten und daraus entstehende Anfragen. Der Hub verwendet selbst kein Tracking und hängt keine Kampagnenparameter an die kanonischen Fachquellen an.
 - **KI-Antworten:** Bei gleichbleibenden Testfragen Quellenlinks und Testdatum protokollieren. Einzelne Antworten sind wechselhaft und kein belastbarer Nachweis eines Rankingeffekts.
 
-Es wurde keine Search-Console-Property, kein Analytics-Zugriff und keine automatische Rankingmessung eingerichtet. Die Veröffentlichung erfolgt weiterhin über den Pull Request und den Pages-Workflow.
+Es wurde keine Search-Console-Property, kein Analytics-Zugriff und keine automatische Rankingmessung eingerichtet. Die Veröffentlichung erfolgt weiterhin über den Pull Request und den GitHub-Pages-Build aus `main/docs`.
 
 ## Nutzungsrechte
 

@@ -1,4 +1,4 @@
-name: Validate and deploy static content to Pages
+name: Validate static GitHub Pages content
 
 on:
   push:
@@ -10,10 +10,6 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: "pages-${{ github.ref }}"
-  cancel-in-progress: false
-
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -22,53 +18,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Check SEO and AI resource consistency
         run: python3 scripts/validate_site.py
-
-  deploy:
-    if: github.event_name != 'pull_request'
-    needs: validate
-    permissions:
-      contents: read
-      pages: write
-      actions: read
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Actions as Pages source
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method PUT "repos/$GITHUB_REPOSITORY/pages" -f build_type=workflow
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Prepare public files
-        run: |
-          mkdir -p _site
-          cp index.html llms.txt llms-full.txt sitemap.xml quellen.json immobilien-vorbereitung.md _site/
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '_site'
-          name: github-pages-${{ github.run_attempt }}
-      - name: Wait for uploaded artifact metadata
-        env:
-          GH_TOKEN: ${{ github.token }}
-          ARTIFACT_NAME: github-pages-${{ github.run_attempt }}
-        run: |
-          for attempt in $(seq 1 10); do
-            artifact_id=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" --jq '.artifacts[] | [.name, .id] | @tsv' | awk -v name="$ARTIFACT_NAME" '$1 == name { print $2 }')
-            if [ -n "$artifact_id" ]; then
-              exit 0
-            fi
-            sleep 3
-          done
-          echo "Uploaded Pages artifact is not yet visible in the API" >&2
-          exit 1
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages-${{ github.run_attempt }}
+      - name: Check published Pages files match source
+        run: python3 scripts/prepare_pages.py --check

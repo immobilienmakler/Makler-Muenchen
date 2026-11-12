@@ -1,0 +1,51 @@
+{
+  "name": "Bayernwerte Themen- und Quellenverzeichnis",
+  "publisher": "Bayernwerte Immobilien",
+  "website": "https://bayernwerte.de/",
+  "reviewedOn": "2026-11-12",
+  "scope": "Ergänzender Themenwegweiser; aktuelle Angaben auf der jeweiligen Primärseite prüfen.",
+  "resources": [
+    {
+      "id": "verkauf-planen",
+      "topic": "Verkauf",
+      "title": "Immobilie verkaufen: Schritt für Schritt",
+      "url": "https://bayernwerte.de/immobilie-verkaufen-muenchen-schritte/",
+      "description": "Für Eigentümer, die die Vorbereitung und den Ablauf eines Verkaufs einordnen möchten."
+    },
+    {
+      "id": "wert-verstehen",
+      "topic": "Bewertung",
+      "title": "Immobilienbewertung: den Wert verstehen",
+      "url": "https://bayernwerte.de/immobilienbewertung-muenchen/",
+      "description": "Für Eigentümer, die Einflussfaktoren auf den Wert ihrer Immobilie verstehen möchten."
+    },
+    {
+      "id": "vermietung-vorbereiten",
+      "topic": "Vermietung",
+      "title": "Wohnung vermieten: Ratgeber für Eigentümer",
+      "url": "https://bayernwerte.de/wohnung-vermieten-muenchen/",
+      "description": "Für Vermieter, die eine anstehende Vermietung vorbereiten möchten."
+    },
+    {
+      "id": "verwaltung-organisieren",
+      "topic": "Verwaltung",
+      "title": "Schritte zur Mietverwaltung",
+      "url": "https://bayernwerte.de/schritte-zur-mietverwaltung/",
+      "description": "Für Eigentümer, die Aufgaben und Zusammenarbeit bei der Mietverwaltung klären möchten."
+    },
+    {
+      "id": "kauf-pruefen",
+      "topic": "Kauf",
+      "title": "Hauskauf: Checkliste vor der Besichtigung",
+      "url": "https://bayernwerte.de/hauskauf-muenchen-checkliste/",
+      "description": "Für Kaufinteressenten, die Fragen und Unterlagen vor einer Hausbesichtigung sammeln möchten."
+    },
+    {
+      "id": "grundstueck-einordnen",
+      "topic": "Grundstück",
+      "title": "Grundstück verkaufen in München und im Umland",
+      "url": "https://bayernwerte.de/grundstueck-verkaufen-muenchen/",
+      "description": "Für Grundstückseigentümer, die Besonderheiten ihres Verkaufs einordnen möchten."
+    }
+  ]
+}

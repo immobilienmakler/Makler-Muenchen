@@ -1,56 +1,44 @@
-# Immobilien Anbieter Webseite
+# Makler München · Bayernwerte Immobilien
 
-Diese Repository enthält Dateien und Anleitungen für den Betrieb der Bayernwerte Immobilien-Website mit Anbindung an die Maklersoftware "Ilogu" über die OpenImmo-Schnittstelle.
+Statische, deutschsprachige Informationsseite für Bayernwerte Immobilien in München und Umgebung. Sie stellt Leistungen und Kontaktmöglichkeiten vor und verweist für aktuelle Immobilienangebote auf [bayernwerte.de](https://bayernwerte.de/).
 
-## Projektübersicht
+## Projektstand
 
-Die Website von [Bayernwerte Immobilien](https://bayernwerte.de) stellt Immobilienangebote in München und Umgebung dar und wird durch aktuelle Objektdaten aus Ilogu automatisch aktualisiert. Die Datenübertragung erfolgt via FTP, und Bilder werden mittels Bildbearbeitung optimiert. Über die **WordPress CLI und Iframe** werden alle Daten in die Website integriert, um Nutzern immer die aktuellsten Immobilienangebote präsentieren zu können.
+Dieses Repository enthält die eigenständige Landingpage `index.html` und den GitHub-Pages-Workflow. HTML und CSS funktionieren ohne JavaScript, externe Schriftarten, Tracking oder Build-Abhängigkeiten.
 
-## Technologie-Stack
+Eine OpenImmo-/Ilogu-Anbindung, FTP-Übertragung, WordPress-CLI, Bildverarbeitung und automatische Angebotsimporte sind **nicht in diesem Repository implementiert**. Angebote werden auf der Hauptwebsite gepflegt und hier verlinkt.
 
-- **Ilogu mit OpenImmo-Schnittstelle**: Übergabe von Objektdaten via FTP.
-- **Bildbearbeitung**: Bildbearbeitung zur Optimierung der Darstellung.
-- **WordPress CLI & Iframe**: Automatisierte Integration der Daten in die WordPress-Seite.
-- **GitHub**: Versionskontrolle und Dokumentation des Projekts.
-- **Werkzeuge**: BayernAtlas für Grundstücksinformationen
+## Lokal ansehen
 
-## Funktionen
+Im Projektverzeichnis mit Python 3 starten:
 
-### Immobilien in München
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
-Bayernwerte Immobilien ist Ihr kompetenter Partner für Immobilien in München und Umgebung. Unser Standort in München bietet umfassende Beratung und Betreuung, von der Bewertung über die Vermarktung bis hin zur Vermittlung.
+Anschließend <http://127.0.0.1:8000> öffnen. Alternativ lässt sich `index.html` direkt im Browser öffnen.
 
-### Immobilienbewertung
+## Pflege und Prüfung
 
-Wir bieten zwei Bewertungsoptionen:
-1. **Online-Bewertung** – kostenlos und direkt auf unserer Website verfügbar.
-2. **Verkehrswertgutachten** – ausführliche und detaillierte Gutachten für höchste Entscheidungssicherheit.
+- Inhalte, Kontaktdaten und Links in `index.html` bearbeiten; CSS steht im `<style>`-Block.
+- Bei Inhaltsänderungen auch Seitentitel, Beschreibung und Open-Graph-Metadaten prüfen.
+- Vor Veröffentlichung kleine und große Bildschirmbreiten sowie Tastaturbedienung prüfen: Navigation, „Zum Inhalt springen“, Kontakt und Angebotslinks.
+- Externe Links regelmäßig auf Erreichbarkeit prüfen. Impressum und Datenschutz verweisen auf die Hauptwebsite; die Angaben müssen für den tatsächlichen Betrieb aktuell und passend sein.
+- Eine Canonical-URL oder `og:url` erst ergänzen, wenn die verbindliche öffentliche URL und das Verhältnis zur Hauptwebsite festgelegt sind.
 
-## Einrichtung und Betrieb
+## Veröffentlichung
 
-1. **Ilogu-Datenintegration**: Die Objektdaten werden regelmäßig über die OpenImmo-Schnittstelle via FTP an den Webserver übertragen.
-2. **Bildbearbeitung mit künstlicher Inteligenz**: Bilder werden automatisch für die optimale Darstellung auf der Website bearbeitet.
-3. **WordPress CLI & Iframe**: Nach der Verarbeitung der Daten werden diese automatisiert in die WordPress-Installation eingepflegt.
+In den Repository-Einstellungen unter **Pages → Build and deployment → Source** die Option **GitHub Actions** auswählen. Der vorhandene Workflow `.github/workflows/static.yml` veröffentlicht bei Pushes auf `main` oder manuellem Start die statische Seite. Änderungen über einen Pull Request werden erst nach dem Zusammenführen veröffentlicht.
 
-## Lizenz
+Der Workflow lädt ausschließlich `index.html` aus einem eigenen Veröffentlichungsverzeichnis hoch. Dokumentation und interne Projektdateien werden dadurch nicht Teil der Website. Werden später lokale Bilder, Stylesheets oder weitere Seiten ergänzt, muss der Kopierschritt im Workflow entsprechend erweitert werden.
 
-Dieses Projekt steht unter der Bayernwerte-Immobilien-Lizenz und ist nicht für die kommerzielle Wiederverwendung freigegeben.
+## Nutzungsrechte
+
+Die bisherige Projektbeschreibung schließt eine kommerzielle Wiederverwendung aus. Eine separate Lizenzdatei liegt nicht vor; aus diesem Repository ergibt sich keine zusätzliche Nutzungserlaubnis. Fragen zu Nutzungsrechten bitte an Bayernwerte Immobilien richten.
 
 ## Kontakt
 
-Für weitere Fragen und Informationen zu Bayernwerte Immobilien:
-- **Website**: [www.bayernwerte.de](https://bayernwerte.de)
--  **Github**: [Immobilienmakler München](https://github.com/immobilienmakler)
-- **Email**: anfrage@bayernwerte.de
-- **Telefon**: +49-(0)89-21909733
-
-## DSGVO konforme Upstream-DNS-Server
-- https://dns.mullvad.net/dns-query
-- https://dns10.quad9.net/dns-query
-- https://dns.quad9.net/dns-query
-- https://doh.ffmuc.net/dns-query
-- https://dnsforge.de/dns-query
-- https://dns.digitale-gesellschaft.ch/dns-query
-- https://unfiltered.adguard-dns.com/dns-query
-- https://doh.libredns.gr/dns-query
-- https://doh-de.blahdns.com/dns-query
+- Website: <https://bayernwerte.de/>
+- E-Mail: <anfrage@bayernwerte.de>
+- Telefon: [+49 89 21909733](tel:+498921909733)
+- GitHub: [immobilienmakler](https://github.com/immobilienmakler)

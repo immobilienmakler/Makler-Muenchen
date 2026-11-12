@@ -29,6 +29,7 @@ jobs:
     permissions:
       contents: read
       pages: write
+      actions: read
       id-token: write
     environment:
       name: github-pages
@@ -37,6 +38,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Use Actions as Pages source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/$GITHUB_REPOSITORY/pages" -f build_type=workflow
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Prepare public files
@@ -47,6 +52,23 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
+          name: github-pages-${{ github.run_attempt }}
+      - name: Wait for uploaded artifact metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_NAME: github-pages-${{ github.run_attempt }}
+        run: |
+          for attempt in $(seq 1 10); do
+            artifact_id=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts" --jq '.artifacts[] | [.name, .id] | @tsv' | awk -v name="$ARTIFACT_NAME" '$1 == name { print $2 }')
+            if [ -n "$artifact_id" ]; then
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "Uploaded Pages artifact is not yet visible in the API" >&2
+          exit 1
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}

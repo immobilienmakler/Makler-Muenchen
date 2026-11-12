@@ -1,13 +1,14 @@
 """Offline checks for drift between HTML, JSON-LD, sitemap and AI profiles."""
 import json
 import re
+from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_FILES = ("index.html", "llms.txt", "llms-full.txt", "sitemap.xml")
+PUBLIC_FILES = ("index.html", "llms.txt", "llms-full.txt", "sitemap.xml", "quellen.json", "immobilien-vorbereitung.md")
 
 
 def require(condition, message):
@@ -26,6 +27,7 @@ class Page(HTMLParser):
         self.meta = {}
         self.ids = []
         self.links = []
+        self.review_dates = []
         self.h1_count = 0
         self.hidden = None
         self.schema = ""
@@ -42,6 +44,8 @@ class Page(HTMLParser):
             self.hidden = attrs.get("type", tag)
         if attrs.get("id"):
             self.ids.append(attrs["id"])
+        if tag == "time" and attrs.get("datetime"):
+            self.review_dates.append(attrs["datetime"])
         if tag == "h1":
             self.h1_count += 1
         if tag == "meta":
@@ -102,7 +106,7 @@ def validate():
     by_type = {node["@type"]: node for node in graph}
     ids = {node["@id"] for node in graph}
     require(len(ids) == len(graph), "Duplicate JSON-LD IDs")
-    require(by_type["WebPage"]["url"] == canonical, "WebPage URL differs from canonical")
+    require(by_type["CollectionPage"]["url"] == canonical, "CollectionPage URL differs from canonical")
     agent = by_type["RealEstateAgent"]
     services = [node for node in graph if node["@type"] == "Service"]
     require(len(services) == 5, "Expected five core services")
@@ -127,7 +131,28 @@ def validate():
             if url.startswith(canonical):
                 relative = url[len(canonical):]
                 require(not relative or relative in PUBLIC_FILES, f"Unpublished AI-profile link: {url}")
-    print("SEO checks passed: URLs, local links, schema, visible FAQs and AI-profile facts agree.")
+    catalog = json.loads((ROOT / "quellen.json").read_text(encoding="utf-8"))
+    resources = catalog["resources"]
+    date.fromisoformat(catalog["reviewedOn"])
+    require(catalog["reviewedOn"] in page.review_dates, "Source review date differs from visible date")
+    require(catalog["publisher"] == agent["name"], "Source publisher differs from company")
+    require(by_type["CollectionPage"]["mainEntity"]["@id"] == by_type["ItemList"]["@id"], "Collection does not reference source list")
+    require(by_type["CollectionPage"]["citation"] == [r["url"] for r in resources], "Page citations differ from source catalog")
+    items = by_type["ItemList"]["itemListElement"]
+    require(len(resources) == len(items) == by_type["ItemList"]["numberOfItems"], "Source count mismatch")
+    require(len({r["url"] for r in resources}) == len(resources), "Duplicate sources")
+    for index, (resource, item) in enumerate(zip(resources, items), 1):
+        require(item["position"] == index, "Incorrect source position")
+        require(urlsplit(resource["url"]).hostname == "bayernwerte.de", "Source must be on primary website")
+        require(resource["url"] in page.links, "Source is not linked in HTML")
+        require(resource["id"] in page.ids, "Source has no visible HTML entry")
+        for key, schema_key in (("title", "name"), ("url", "url"), ("description", "description")):
+            require(resource[key] == item["item"][schema_key], "Source catalog differs from JSON-LD")
+        require(resource["title"] in text and resource["description"] in text, "Source text missing from HTML")
+        for filename in ("llms.txt", "llms-full.txt", "immobilien-vorbereitung.md"):
+            require(resource["url"] in (ROOT / filename).read_text(encoding="utf-8"), f"Source missing from {filename}")
+    require(by_type["DigitalDocument"]["url"] == canonical + "immobilien-vorbereitung.md", "Checklist URL differs")
+    print("SEO checks passed: URLs, schema, FAQs, AI profiles, source catalog and checklist agree.")
 
 
 if __name__ == "__main__":

@@ -107,4 +107,18 @@ Die Zusammenfassung enthält keine unbelegten Aussagen über Marktführerschaft,
 - [Wissensbasis der Hauptwebsite](https://bayernwerte.de/llms-full.txt)
 - [Sitemap-Index der Hauptwebsite](https://bayernwerte.de/sitemap_index.xml)
 
-Die HTML-Seite enthält Schema.org-JSON-LD für Unternehmen, Website-Seite, die fünf Leistungen und die dort sichtbaren häufigen Fragen. Die Textdateien ergänzen HTML und strukturierte Daten; sie ersetzen weder aktuelle Primärquellen noch eine Crawl-Zugriffssteuerung.
+Die HTML-Seite enthält Schema.org-JSON-LD für Unternehmen, Themenübersicht (CollectionPage), Quellenliste (ItemList), Vorbereitungsliste (DigitalDocument), die fünf Leistungen und die dort sichtbaren häufigen Fragen. Die Textdateien ergänzen HTML und strukturierte Daten; sie ersetzen weder aktuelle Primärquellen noch eine Crawl-Zugriffssteuerung.
+
+## Themenwegweiser und Vorbereitung
+
+Dieser ergänzende Wegweiser ordnet Verkauf, Bewertung, Vermietung, Verwaltung und Kauf nach dem jeweiligen Vorhaben ein. Er enthält eigene Punkte zur Gesprächsvorbereitung und verweist für vertiefende Informationen auf die Fachseiten von Bayernwerte.
+
+- [Immobilie verkaufen: Schritt für Schritt](https://bayernwerte.de/immobilie-verkaufen-muenchen-schritte/): Für Eigentümer, die die Vorbereitung und den Ablauf eines Verkaufs einordnen möchten.
+- [Immobilienbewertung: den Wert verstehen](https://bayernwerte.de/immobilienbewertung-muenchen/): Für Eigentümer, die Einflussfaktoren auf den Wert ihrer Immobilie verstehen möchten.
+- [Wohnung vermieten: Ratgeber für Eigentümer](https://bayernwerte.de/wohnung-vermieten-muenchen/): Für Vermieter, die eine anstehende Vermietung vorbereiten möchten.
+- [Schritte zur Mietverwaltung](https://bayernwerte.de/schritte-zur-mietverwaltung/): Für Eigentümer, die Aufgaben und Zusammenarbeit bei der Mietverwaltung klären möchten.
+- [Hauskauf: Checkliste vor der Besichtigung](https://bayernwerte.de/hauskauf-muenchen-checkliste/): Für Kaufinteressenten, die Fragen und Unterlagen vor einer Hausbesichtigung sammeln möchten.
+- [Grundstück verkaufen in München und im Umland](https://bayernwerte.de/grundstueck-verkaufen-muenchen/): Für Grundstückseigentümer, die Besonderheiten ihres Verkaufs einordnen möchten.
+
+- [Vorbereitungsliste für das Immobiliengespräch](https://immobilienmakler.github.io/Makler-Muenchen/immobilien-vorbereitung.md): ausfüllbare Markdown-Checkliste; keine vollständige Liste rechtlich erforderlicher Unterlagen.
+- [Themen- und Quellenverzeichnis](https://immobilienmakler.github.io/Makler-Muenchen/quellen.json): dieselben sechs Fachquellen als JSON mit Thema, Einordnung und Datum des redaktionellen Abgleichs.

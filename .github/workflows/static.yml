@@ -42,7 +42,7 @@ jobs:
       - name: Prepare public files
         run: |
           mkdir -p _site
-          cp index.html llms.txt llms-full.txt sitemap.xml _site/
+          cp index.html llms.txt llms-full.txt sitemap.xml quellen.json immobilien-vorbereitung.md _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
